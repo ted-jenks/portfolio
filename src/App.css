@@ -10,6 +10,7 @@
   min-height: 93vh;
   border: 1px rgba(255, 0, 0, 0) solid;
   padding-top: 5rem;
+  overflow-x: hidden;
 }
 
 .pageContainer {
@@ -20,5 +21,6 @@
   .App{
   height: calc(100% + 60px);
   min-height: calc(100% + 60px);
+    overflow-x: hidden;
   }
 }
