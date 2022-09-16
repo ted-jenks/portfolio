@@ -18,6 +18,6 @@
 
 @media only screen and (max-width: 700px) {
   .App{
-    min-height: 105vh;
+    /*min-height: 105vh;*/
   }
 }
