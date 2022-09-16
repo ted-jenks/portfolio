@@ -48,6 +48,7 @@ export const Splash = (props) => {
 
     return (
         <div style={{
+            height: "93vh",
             position: "relative",
             overflowX: "hidden",
             width: "100%"
