@@ -67,7 +67,7 @@ export const Splash = (props) => {
                     </div>
                 </div>
                 <div className="contentContainer">
-                    <div className="intro" style={isBigScreen ? {fontSize: width / 90} : {fontSize: 10.5}}>
+                    <div className="intro" style={isBigScreen ? {fontSize: width / 90} : {fontSize: 10}}>
                         Hi, I am an Imperial MSc Computer Science Graduate at{" "}
                         <a
                             style={linkStyle}
