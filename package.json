@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://ted-jenks.github.io/portfolio",
+  "homepage": "tedjenks.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^4.0.0",
     "lottie-react": "^2.3.1",
     "lottie-react-web": "^2.2.2",
     "prettier": "^2.7.1",
