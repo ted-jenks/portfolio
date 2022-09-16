@@ -11,7 +11,7 @@ export const Splash = (props) => {
     const [ref, {width}] = useMeasure();
     const [show, setShow] = useState(true);
     const isBigScreen = useMediaQuery({query: '(min-width: 1100px)'})
-    const isPhone  = useMediaQuery({query: '(max-width: 700px)'})
+    const isPhone = useMediaQuery({query: '(max-width: 700px)'})
 
     const linkStyle = {
         color: "var(--contrast)",
@@ -29,7 +29,7 @@ export const Splash = (props) => {
         width: "100vw",
         position: "absolute",
         right: "-25vh",
-        top: "13vh",
+        top: "8vh",
         animation: "fadeInAnim ease 5s",
     }
 
@@ -48,13 +48,14 @@ export const Splash = (props) => {
     });
 
     return (
-        <div style={!isBigScreen ?  {
-            height: "93vh",
-            position: "relative",
-            overflowX: "hidden",
-            overflowY: "hidden",
-            width: "100%"
-        }: {}}>
+        <div style={
+            !isBigScreen ? {
+                    height: "93vh",
+                    position: "relative",
+                    overflowX: "hidden",
+                    overflowY: "hidden",
+                    width: "100%"
+                }:{}}>
             <Fade delay={300}>
                 <div className="contentContainer">
                     <div
@@ -99,7 +100,7 @@ export const Splash = (props) => {
             <div className={show ? "aboutMeContainer" : "aboutMeContainer aboutMeContainerHidden"}
                  onClick={() => props.scollToRef.current.scrollIntoView(
                      {behavior: "smooth"})} style={isBigScreen ? {} : {fontSize: "0.9rem"}}>
-                <div style={{paddingBottom: "0.4rem"}}> About Me </div>
+                <div style={{paddingBottom: "0.4rem"}}> About Me</div>
                 <ExpandCircleDownIcon fontSize={isBigScreen ? 'large' : 'medium'}/>
             </div>
         </div>
