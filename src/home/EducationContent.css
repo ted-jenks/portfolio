@@ -1,0 +1,61 @@
+@import url("../Base.css");
+
+.descriptionEducation {
+    text-align: right;
+    padding: 1rem 5.2rem 3rem 15rem;
+    font-size: 0.9rem;
+}
+
+.gradeEducation {
+    text-align: right;
+    padding: 0.7rem 5.2rem 0 0;
+    font-size: 3rem;
+    color: var(--primary-light);
+}
+
+.queensTower {
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    height: 85%;
+}
+
+.wrap {
+    position: relative;
+}
+
+@media only screen and (max-width: 1350px) {
+    .queensTower {
+        position: absolute;
+        bottom: 4rem;
+        left: 0;
+        height: 65%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .descriptionEducation {
+        text-align: right;
+        padding: 1rem 5.2rem 3rem 5.2rem;
+        font-size: 0.9rem;
+    }
+
+    .queensTower {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .descriptionEducation {
+        text-align: right;
+        padding: 0.3rem 2.4rem 3rem 2rem;
+        font-size: 0.6rem;
+    }
+
+    .gradeEducation {
+        text-align: right;
+        padding: 0.35rem 2.4rem 0 0;
+        font-size: 2rem;
+        color: var(--primary-light);
+    }
+}

@@ -1,0 +1,59 @@
+@import url("../Base.css");
+
+.drawer {
+    background-color: var(--primary-dark);
+    opacity: 100%;
+    top: 0;
+    left: -15rem;
+    height: 100vh;
+    width: 15rem;
+    position: fixed;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+    transition: var(--transition);
+}
+
+.closed {
+    visibility: hidden;
+}
+
+.open {
+    transform: translateX(15rem);
+}
+
+.closeContainer {
+    padding: .8rem 0.8rem 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeClickBox {
+    cursor: pointer;
+}
+
+.selectorContainer {
+    height: 100%;
+    padding: 3rem 0 0 1rem;
+}
+
+
+.drawerSocialsContainer {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5rem 0 2.5rem;
+    width: 10rem;
+    position: absolute;
+    bottom:0;
+}
+
+.drawerSocialsItem {
+    justify-content: center;
+    margin-bottom: 1.3rem;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.drawerSocialsItem:hover {
+    color: var(--contrast);
+}

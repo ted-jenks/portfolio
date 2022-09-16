@@ -1,0 +1,20 @@
+@import url("../Base.css");
+
+.buttonContainer {
+    align-itmes: center;
+    justify-content: center;
+    border: 0.05rem solid var(--contrast);
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.75rem;
+    font-size: var(--nav-font-size);
+    font-family: var(--nav-font-family);
+    color: var(--contrast);
+    cursor: pointer;
+    line-height: 1;
+    transition: var(--transition);
+}
+
+.buttonContainer:hover {
+    background-color: var(--contrast);
+    color: var(--primary-dark);
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+:root {
+    --primary-dark: #205072;
+    --primary-medium: #329D9C;
+    --primary-light: #56C596;
+    --contrast: #A7EDE0;
+    --primary-text: #FFFFFF;
+    --nav-font-size: 1.3rem;
+    --nav-font-family: 'Abel', sans-serif;
+    --font-family: 'ABeeZee', sans-serif;
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.contentContainer {
+    padding: 2rem 0 0 0;
+    font-family: var(--font-family);
+    color: var(--primary-text);
+    animation: fadeContentIn ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*@keyframes fadeContentIn {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    25% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/

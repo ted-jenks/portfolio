@@ -1,0 +1,48 @@
+@import url("../Base.css");
+
+.selectorItem {
+    text-align: left;
+    font-size: var(--nav-font-size);
+    font-family: var(--nav-font-family);
+    padding: 0 0 1rem 2rem;
+}
+
+.drawerItem {
+    width: max-content;
+    align-content: center;
+    justify-content: center;
+    margin: 0 0 2rem 1.5rem;
+    font-size: var(--nav-font-size);
+    font-family: var(--nav-font-family);
+    color: var(--primary-text);
+    cursor: pointer;
+    line-height: 1;
+    transition: var(--transition);
+    text-decoration: none;
+    align-items: center;
+}
+
+.highlightDrawer {
+    width: 0.3rem;
+    height: var(--nav-font-size);
+    background-color: var(--contrast);
+    position: fixed;
+    top: 6.2rem;
+    left: 0;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.drawerItem:hover {
+    /*border-top-color: var(--primary-text);*/
+    color: var(--contrast);
+}
+
+.active {
+    /*border-top-color: var(--contrast);*/
+    color: var(--contrast);
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}

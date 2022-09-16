@@ -1,0 +1,51 @@
+@import url("../Base.css");
+
+
+.homeBarContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2rem 0 0;
+    transition: var(--transition);
+    background-color: rgba(32, 80, 114, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 3.9rem;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+
+.active {
+    visibility: visible;
+    transition: var(--transition);
+}
+
+.hidden {
+    visibility: hidden;
+    transition: var(--transition);
+    transform: translateY(-100%);
+}
+
+.buttonHomebarContainer {
+    animation: slideInRightAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInRightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

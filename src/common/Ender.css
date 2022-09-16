@@ -1,0 +1,13 @@
+@import url("../Base.css");
+
+.ender {
+    font-family: var(--nav-font-family);
+    font-size: var(--nav-font-size);
+    color: var(--primary-text);
+}
+
+@media only screen and (max-width: 700px) {
+    .ender {
+        font-size: 0.7rem;
+    }
+}

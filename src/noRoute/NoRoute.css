@@ -1,0 +1,10 @@
+@import url("../Base.css");
+
+
+.noRouteCont {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    padding: 25vh 0 0 0;
+}
