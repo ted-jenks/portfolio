@@ -7,7 +7,7 @@
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(160deg, var(--primary-dark), var(--primary-dark), var(--primary-medium));
-  min-height: 100vh;
+  min-height: 93vh;
   border: 1px rgba(255, 0, 0, 0) solid;
   padding-top: 5rem;
   overflow-x: hidden;
