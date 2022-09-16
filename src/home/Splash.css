@@ -67,7 +67,7 @@
         text-align: left;
         width: 90vw;
         color: var(--primary-text);
-        padding: 0 0 80vh 1.5rem;
+        padding: 0 1rem 80vh 1.5rem;
         line-height: 1;
     }
 }
