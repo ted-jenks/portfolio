@@ -47,7 +47,11 @@ export const Splash = (props) => {
     });
 
     return (
-        <>
+        <div style={{
+            position: "relative",
+            overflowX: "hidden",
+            width: "100%"
+        }}>
             <Fade delay={300}>
                 <div className="contentContainer">
                     <div
@@ -95,6 +99,6 @@ export const Splash = (props) => {
                 <div style={{paddingBottom: "0.4rem"}}> About Me</div>
                 <ExpandCircleDownIcon fontSize={isBigScreen ? 'large' : 'medium'}/>
             </div>
-        </>
+        </div>
     )
 }
