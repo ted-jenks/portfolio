@@ -19,10 +19,10 @@ class HomeEnd extends Component {
                         window.location.href = '/';
                     }}/>
                     <Button text="Projects" onClick={() => {
-                        window.location.href = '/projects';
+                        window.location.href = '/#/projects';
                     }}/>
-                    <Button text="Contact"onClick={() => {
-                        window.location.href = '/contact';
+                    <Button text="Contact" onClick={() => {
+                        window.location.href = '/#/contact';
                     }}/>
                 </div>
             <div className="homeEndHeading">
