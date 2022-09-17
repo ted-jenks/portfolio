@@ -1,7 +1,6 @@
 import React from "react"
 import "./Home.css"
 import {DateBubble} from "./DateBubble";
-import {PalantirContent} from "./PalantirContent";
 import {MastersContent} from "./MastersContent";
 
 export const Masters = () => {
@@ -25,7 +24,7 @@ export const Masters = () => {
 
             <div className="educationSection">
 
-                <MastersContent />
+                <MastersContent/>
 
             </div>
         </>

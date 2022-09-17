@@ -1,12 +1,12 @@
-import React, {Component, useEffect} from "react";
+import React, {Component} from "react";
 import "./NavBar.css"
-import {Link, useResolvedPath, useMatch} from "react-router-dom"
+import {Link, useMatch, useResolvedPath} from "react-router-dom"
 import {useMeasure} from "react-use";
 
 class NavBar extends Component {
     state = {
         width: 10,
-        active:0,
+        active: 0,
         translate: [0, 5, 11.3],
     }
 
@@ -32,9 +32,10 @@ class NavBar extends Component {
             <div className={"navBarContainer"}>
                 <div className="highlight" style={highlightStyle}/>
                 {this.props.titles.map((t, i) => {
-                    return(
-                        <CustomLink key={i} ind={i} returnWidths={this.returnWidths} onActiveChange={this.handleActiveChange}
-                                       to={this.props.routes[i]}>
+                    return (
+                        <CustomLink key={i} ind={i} returnWidths={this.returnWidths}
+                                    onActiveChange={this.handleActiveChange}
+                                    to={this.props.routes[i]}>
                             {t}
                         </CustomLink>);
                 })}
@@ -43,7 +44,7 @@ class NavBar extends Component {
     }
 }
 
-function CustomLink({to, children, ind, returnWidths, onActiveChange, ...props}) {
+function CustomLink({to, children, ind, onActiveChange}) {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({path: resolvedPath.pathname, end: true})
     const [ref, {width}] = useMeasure();

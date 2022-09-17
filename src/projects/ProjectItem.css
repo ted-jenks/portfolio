@@ -10,23 +10,23 @@
     align-items: center;
 }
 
-.imageContainer{
+.imageContainer {
     flex: 0 0 60%;
     position: relative;
 }
 
-.imageOverlay{
+.imageOverlay {
     background-color: rgba(32, 80, 114, 0.65);
     position: absolute;
     width: 100%;
     max-width: 47rem;
     height: 99.3%;
-    left:0;
+    left: 0;
     transition: var(--transition);
     cursor: pointer;
 }
 
-.imageOverlay:hover{
+.imageOverlay:hover {
     background-color: rgba(32, 80, 114, 0);
 }
 
@@ -47,7 +47,7 @@
     position: absolute;
     top: -3.6rem;
     right: -1rem;
- font-size: 2rem;
+    font-size: 2rem;
     text-align: right;
     width: 100%;
 }
@@ -79,7 +79,7 @@
     width: 29vw;
     max-width: 29rem;
     right: -0.9rem;
-    top:  1.5rem;
+    top: 1.5rem;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -103,21 +103,21 @@
         margin: auto auto 50vh;
     }
 
-    .imageContainer{
+    .imageContainer {
         padding-right: 30%;
     }
 
-    .imageOverlay{
+    .imageOverlay {
         background-color: rgba(32, 80, 114, 0.65);
         position: absolute;
         width: 70%;
         max-width: 47rem;
         height: 98.6%;
-        left:0;
+        left: 0;
         transition: var(--transition);
     }
 
-    .imageOverlay:hover{
+    .imageOverlay:hover {
         background-color: rgba(32, 80, 114, 0);
     }
 
@@ -149,6 +149,6 @@
         width: 64vw;
         max-width: 64rem;
         right: -0.9rem;
-        top:  1.5rem;
+        top: 1.5rem;
     }
 }

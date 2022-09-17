@@ -18,7 +18,7 @@ class HomeBar extends Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
-        setTimeout(() => this.setState({show:true}), 300);
+        setTimeout(() => this.setState({show: true}), 300);
     }
 
     componentWillUnmount() {
@@ -39,17 +39,17 @@ class HomeBar extends Component {
 
     render() {
         return (
-            <div className={ this.state.show ? "homeBarContainer active" : "homeBarContainer hidden"}>
-                <MediaQuery minWidth={1100} >
-                <NavBar titles={['Home', 'Projects', 'Contact']}
-                        routes={['/', '/projects', '/contact']}/>
-                </MediaQuery>
-                <MediaQuery maxWidth={1100} >
-                <MenuDrawer titles={['Home', 'Projects', 'Contact']}
+            <div className={this.state.show ? "homeBarContainer active" : "homeBarContainer hidden"}>
+                <MediaQuery minWidth={1100}>
+                    <NavBar titles={['Home', 'Projects', 'Contact']}
                             routes={['/', '/projects', '/contact']}/>
                 </MediaQuery>
+                <MediaQuery maxWidth={1100}>
+                    <MenuDrawer titles={['Home', 'Projects', 'Contact']}
+                                routes={['/', '/projects', '/contact']}/>
+                </MediaQuery>
                 <div className="buttonHomebarContainer">
-                <Button text={'Resume'} onClick={this.handleResumeClick}/>
+                    <Button text={'Resume'} onClick={this.handleResumeClick}/>
                 </div>
             </div>
         )

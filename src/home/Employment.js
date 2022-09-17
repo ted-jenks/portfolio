@@ -1,7 +1,6 @@
 import React from "react";
 import {Palantir} from "./Palantir";
 import {QA} from "./QA";
-import {LineEnding} from "./LineEnding";
 import "./Home.css"
 
 export const Employment = () => {

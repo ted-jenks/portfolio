@@ -44,7 +44,7 @@
     position: absolute;
     top: 0;
     left: 2.2rem;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation: fadeInHighlight ease 3s;

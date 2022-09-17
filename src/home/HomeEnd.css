@@ -33,6 +33,7 @@
         font-size: 2rem;
         color: var(--contrast);
     }
+
     .homeEndButtonContainer {
         display: flex;
         flex-direction: row;

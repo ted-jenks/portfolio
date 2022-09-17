@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from "react";
+import React, {Component} from "react";
 import "./Drawer.css";
 import Close from '@mui/icons-material/Close';
 import DrawerSelector from "./DrawerSelector";

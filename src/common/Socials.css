@@ -1,13 +1,13 @@
 @import url("../Base.css");
 
-.socialsContainer{
+.socialsContainer {
     width: calc(5rem + 1vw);
     position: fixed;
     bottom: 0;
-    transition:  linear .7s;
+    transition: linear .7s;
 }
 
-.socialsItem{
+.socialsItem {
     justify-content: center;
     margin-bottom: 1.3rem;
     color: var(--contrast);
@@ -23,7 +23,7 @@
 }
 
 .hiddenSoc {
-    transition:  linear .2s;
+    transition: linear .2s;
     transform: translateY(20rem);
 }
 

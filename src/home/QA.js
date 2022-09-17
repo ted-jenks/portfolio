@@ -28,7 +28,7 @@ export const QA = () => {
 
             <div className="employmentSection">
 
-                <QAContent />
+                <QAContent/>
 
             </div>
         </>

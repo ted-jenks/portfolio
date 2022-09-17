@@ -49,12 +49,12 @@ export const Splash = (props) => {
     return (
         <div style={
             !isBigScreen ? {
-                    height: "93vh",
-                    position: "relative",
-                    overflowX: "hidden",
-                    overflowY: "hidden",
-                    width: "100%"
-                }:{}}>
+                height: "93vh",
+                position: "relative",
+                overflowX: "hidden",
+                overflowY: "hidden",
+                width: "100%"
+            } : {}}>
             <Fade delay={300}>
                 <div className="contentContainer">
                     <div

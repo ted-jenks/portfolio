@@ -1,5 +1,5 @@
 import './App.css';
-import {Component} from "react";
+import React, {Component} from "react";
 import Socials from "./common/Socials";
 import HomeBar from "./common/HomeBar";
 import {Home} from "./home/Home"
@@ -22,15 +22,15 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="pageContainer">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="*" element={<NoRoute />} />
-                </Routes>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/projects" element={<Projects/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                        <Route path="*" element={<NoRoute/>}/>
+                    </Routes>
                 </div>
-                <Socials />
-                <HomeBar />
+                <Socials/>
+                <HomeBar/>
             </div>
         )
     }

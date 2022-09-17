@@ -11,7 +11,7 @@ class ProjectItem extends Component {
                     <div className="imageOverlay" onClick={() => {
                         window.location.href = this.props.route;
                     }}/>
-                    <img className={"projectImage"} src={this.props.img}/>
+                    <img className={"projectImage"} src={this.props.img} alt={"image of project"}/>
                 </div>
                 <div className={"projectText"}>
                     <div className={"wrap"}>
@@ -70,7 +70,7 @@ class ProjectItem extends Component {
                     <div className="imageOverlay" onClick={() => {
                         window.location.href = this.props.route;
                     }}/>
-                    <img className={"projectImage"} src={this.props.img}/>
+                    <img className={"projectImage"} src={this.props.img} alt={"image of project"}/>
                 </div>
             </div>);
     }
@@ -79,10 +79,10 @@ class ProjectItem extends Component {
         return (
             <div className={"projectItemContainer"}>
                 <div className="imageContainer" style={{paddingLeft: "30%", paddingRight: "0"}}>
-                    <div className="imageOverlay" style={{left: "30%", right: 0, width:"70.1%"}} onClick={() => {
+                    <div className="imageOverlay" style={{left: "30%", right: 0, width: "70.1%"}} onClick={() => {
                         window.location.href = this.props.route;
                     }}/>
-                    <img className={"projectImage"} src={this.props.img}/>
+                    <img className={"projectImage"} src={this.props.img} alt={"image of project"}/>
                 </div>
                 <div className={"projectText"}>
                     <div className={"wrap"}>

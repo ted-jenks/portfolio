@@ -12,7 +12,8 @@ export const Socials = () => {
 
     setTimeout(() => setLoadTime(true), 900)
 
-    return (<div className={(isTooSmall && loadTime && isTooNarrow) ? "socialsContainer activeSoc" : "socialsContainer hiddenSoc"}>
+    return (<div
+            className={(isTooSmall && loadTime && isTooNarrow) ? "socialsContainer activeSoc" : "socialsContainer hiddenSoc"}>
             <div className="socialsItem" onClick="location.href='https://www.linkedin.com/in/ted-jenks-ab631a1a3/';">
                 <a className="socialsItem" href="https://www.linkedin.com/in/ted-jenks-ab631a1a3/">
                     <LinkedIn fontSize='medium'/>

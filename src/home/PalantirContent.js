@@ -40,7 +40,8 @@ export const PalantirContent = () => {
                         </div>
                         <div className="responsibilitiesDescription">
                             <p>
-                                Communicating with others effectively in stressful and challenging scenarios, ensuring all
+                                Communicating with others effectively in stressful and challenging scenarios, ensuring
+                                all
                                 in the team are comfortable and the team remains efficient.
                             </p>
                         </div>
@@ -51,7 +52,8 @@ export const PalantirContent = () => {
                         </div>
                         <div className="responsibilitiesDescription">
                             <p>
-                                Presenting and defending my ideas and opinions to others from a range of positions in the
+                                Presenting and defending my ideas and opinions to others from a range of positions in
+                                the
                                 company, both technical and non-technical.
                             </p>
                         </div>

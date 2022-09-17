@@ -1,41 +1,41 @@
 @import url("../Base.css");
 
 
-.contactText{
+.contactText {
     font-size: 2rem;
     padding: 0 30vw 5vh 30vw;
 }
 
-.contactHeading{
+.contactHeading {
     font-size: 4rem;
     color: var(--contrast);
     padding: 25vh 0 5vh 0;
 }
 
-.contactButtonContainer{
+.contactButtonContainer {
     width: max-content;
     margin: auto;
 }
 
 @media only screen and (max-width: 900px) {
-    .contactText{
+    .contactText {
         font-size: 1.5rem;
         padding: 0 15vw 3vh 15vw;
     }
 
-    .contactHeading{
+    .contactHeading {
         font-size: 3rem;
         padding: 25vh 0 3vh 0;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .contactText{
+    .contactText {
         font-size: 0.8rem;
         padding: 0 15vw 3vh 15vw;
     }
 
-    .contactHeading{
+    .contactHeading {
         font-size: 1.5rem;
         padding: 25vh 0 3vh 0;
     }

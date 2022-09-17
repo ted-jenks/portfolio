@@ -5,7 +5,6 @@ import ProjectItem from "./ProjectItem";
 import MotshiImg from "../assets/motshi.png"
 import VisualisingImg from "../assets/visualisingTheNews.png"
 import Ender from "../common/Ender";
-import MediaQuery from "react-responsive";
 
 class Projects extends Component {
     componentDidMount() {
