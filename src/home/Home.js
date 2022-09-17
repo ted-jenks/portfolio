@@ -22,7 +22,7 @@ export const Home = () => {
 
             <div className="timelineContainer">
 
-                <Fade delay={300}>
+                <Fade delay={100}>
 
                     <Employment/>
 
