@@ -11,7 +11,6 @@ export const Splash = (props) => {
     const [ref, {width}] = useMeasure();
     const [show, setShow] = useState(true);
     const isBigScreen = useMediaQuery({query: '(min-width: 1100px)'})
-    const isPhone = useMediaQuery({query: '(max-width: 700px)'})
 
     const linkStyle = {
         color: "var(--contrast)",
