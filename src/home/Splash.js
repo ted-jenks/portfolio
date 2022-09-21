@@ -18,16 +18,19 @@ export const Splash = (props) => {
         textDecoration: "none",
     }
     const animStyleDesktop = {
-        width: "75vw",
+        width: "160vh",
+        height: "160vh",
         position: "absolute",
         right: "-30vh",
-        top: "-40vh",
+        top: "-100%",
+        transform: "translateY(50%)",
         animation: "fadeInAnim ease 5s",
     }
     const animStylePhone = {
-        width: "100vw",
+        width: "95vw",
+        height: "95vh",
         position: "absolute",
-        right: "-25vh",
+        right: "-25vw",
         top: "8vh",
         animation: "fadeInAnim ease 5s",
     }
@@ -94,7 +97,7 @@ export const Splash = (props) => {
                 }}
                 style={isBigScreen ? animStyleDesktop : animStylePhone}
                 speed={0.15}
-                height={isBigScreen ? 2000 : null}
+                // height={isBigScreen ? 2000 : null}
             />
             <div className={show ? "aboutMeContainer" : "aboutMeContainer aboutMeContainerHidden"}
                  onClick={() => props.scollToRef.current.scrollIntoView(
