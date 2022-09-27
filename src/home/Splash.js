@@ -31,12 +31,11 @@ export const Splash = (props) => {
         height: "95vh",
         position: "absolute",
         right: "-25vw",
-        top: "8vh",
+        top: "5.5vh",
         animation: "fadeInAnim ease 5s",
     }
 
     const handleScroll = () => {
-        console.log(9, document.body.getBoundingClientRect().top)
         setShow(document.body.getBoundingClientRect().top > -100)
     };
 
