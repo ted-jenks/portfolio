@@ -36,9 +36,9 @@ export const Home = () => {
 
             </div>
 
-            <Fade delay={300}>
-                <HomeEnd/>
-            </Fade>
+            {/*<Fade delay={300}>*/}
+            <HomeEnd/>
+            {/*</Fade>*/}
 
             <Ender/>
         </>
