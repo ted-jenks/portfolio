@@ -28,7 +28,7 @@ export const PalantirContent = () => {
                         </div>
                         <div className="responsibilitiesDescription">
                             <p>
-                                Working with a team to reach the best possible solutions and use Git and clean coding
+                                Working with a team to reach the best possible solutions and use Git version control and clean coding
                                 practices to collaborate while developing software and achieve readable, well-tested
                                 code.
                             </p>
