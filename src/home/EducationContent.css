@@ -10,14 +10,14 @@
     text-align: right;
     padding: 0.7rem 5.2rem 0 0;
     font-size: 3rem;
-    color: var(--primary-light);
+    color: var(--contrast);
 }
 
 .queensTower {
     position: absolute;
     bottom: 4rem;
     left: 0;
-    height: 85%;
+    height: 75%;
 }
 
 .wrap {
@@ -56,6 +56,5 @@
         text-align: right;
         padding: 0.35rem 2.4rem 0 0;
         font-size: 2rem;
-        color: var(--primary-light);
     }
 }

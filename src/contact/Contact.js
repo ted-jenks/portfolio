@@ -32,7 +32,7 @@ class Contact extends Component {
                         </div>
                     </div>
 
-                    <div style={{height: "45vh"}}/>
+                    <div style={{height: "33vh"}}/>
                 </Fade>
 
                 <Ender style={{position: "absolute", bottom: 0}}/>

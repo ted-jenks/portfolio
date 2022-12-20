@@ -3,7 +3,7 @@
 .description {
     text-align: left;
     padding: 2rem 0 0 5.2rem;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 
 .responsibilitiesItem {
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary-light);
+    color: var(--contrast);
 }
 
 .responsibilitiesIconContainer p {
@@ -27,7 +27,7 @@
 
 .responsibilitiesDescription {
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     display: flex;
 }
 
@@ -57,7 +57,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--primary-light);
     }
 
     .responsibilitiesIconContainer p {

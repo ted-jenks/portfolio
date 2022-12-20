@@ -1,7 +1,7 @@
 @import url("../Base.css");
 
 .timelineContainer {
-    padding: 1rem 20vw 0 20vw;
+    padding: 1rem 25vw 0 25vw;
     font-family: var(--font-family);
     color: var(--primary-text);
 }
@@ -14,7 +14,8 @@
     width: max-content;
     line-height: 2em;
     border-radius: .7rem;
-    background-color: var(--primary-light);
+    background-color: var(--contrast);
+    color: var(--primary-dark);
 }
 
 .employmentSection {
@@ -25,7 +26,7 @@
 .employmentLine {
     margin: 0 0 0 3.05rem;
     flex: 0 0 0.2em;
-    background-color: var(--primary-light);
+    background-color: var(--contrast);
 }
 
 .employmentHeading {
@@ -48,7 +49,8 @@
     width: max-content;
     line-height: 2em;
     border-radius: .7rem;
-    background-color: var(--primary-light);
+    background-color: var(--contrast);
+    color: var(--primary-dark);
 }
 
 .educationSection {
@@ -60,7 +62,7 @@
 .educationLine {
     margin: 0 3.05rem 0 0;
     flex: 0 0 0.2em;
-    background-color: var(--primary-light);
+    background-color: var(--contrast);
 }
 
 .educationHeading {
@@ -99,13 +101,11 @@
         width: max-content;
         line-height: 2em;
         border-radius: .7rem;
-        background-color: var(--primary-light);
     }
 
     .employmentLine {
         margin: 0 0 0 1.2rem;
         flex: 0 0 0.2em;
-        background-color: var(--primary-light);
     }
 
     .employmentHeading {
@@ -128,13 +128,11 @@
         width: max-content;
         line-height: 2em;
         border-radius: .7rem;
-        background-color: var(--primary-light);
     }
 
     .educationLine {
         margin: 0 1.2rem 0 0;
         flex: 0 0 0.2em;
-        background-color: var(--primary-light);
     }
 
     .educationHeading {
