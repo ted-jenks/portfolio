@@ -7,7 +7,7 @@ export const MastersContent = () => {
         <>
             <div>
                 <div className="gradeEducation">
-                    70
+                    86
                 </div>
                 <div className="descriptionEducation">
                     Imperial is a global top ten university with a world-renowned reputation in science and engineering.
