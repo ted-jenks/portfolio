@@ -35,9 +35,9 @@ class Projects extends Component {
                         industry derived from WikiData and populates it with current stories related to each node.
                         Articles are analysed with NLP and the areas they effect can be identified in real time.
                         Multiple sources are scraped for articles, keeping the visualisation up to date and unbiased.
-                        <br/><br/>
-                        NOTE: Big Tech Visualisation had the machine running article scraping shut down. Therefore, it
-                        is in a frozen state. Articles can still be seen by setting the date filter to a high value.
+                        {/*<br/><br/>*/}
+                        {/*NOTE: Big Tech Visualisation had the machine running article scraping shut down. Therefore, it*/}
+                        {/*is in a frozen state. Articles can still be seen by setting the date filter to a high value.*/}
                     </ProjectItem>
                 </Fade>
                 <Ender/>
