@@ -1,12 +1,11 @@
 import './App.css';
 import React, {Component} from "react";
 import Socials from "./common/Socials";
-import HomeBar from "./common/HomeBar";
 import {Home} from "./home/Home"
-import Projects from "./projects/Projects"
-import Contact from "./contact/Contact"
-import {Route, Routes} from "react-router-dom"
+import Button from "./common/Button";
+import {Route, Routes} from "react-router-dom";
 import NoRoute from "./noRoute/NoRoute";
+import cv from "./assets/CV.pdf";
 
 
 class App extends Component {
@@ -15,8 +14,8 @@ class App extends Component {
     }
 
     handleResumeClick = () => {
-        console.log('Resume Button Pressed')
-    };
+        window.location.href = cv
+    }
 
     render() {
         return (
@@ -24,13 +23,13 @@ class App extends Component {
                 <div className="pageContainer">
                     <Routes>
                         <Route path="/" element={<Home/>}/>
-                        <Route path="/projects" element={<Projects/>}/>
-                        <Route path="/contact" element={<Contact/>}/>
                         <Route path="*" element={<NoRoute/>}/>
                     </Routes>
                 </div>
+                <div className="resumeContainer">
+                    <Button text={"Resume"} onClick={this.handleResumeClick} />
+                </div>
                 <Socials/>
-                <HomeBar/>
             </div>
         )
     }

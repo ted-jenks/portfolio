@@ -1,166 +1,174 @@
 @import url("../Base.css");
 
 
+.topSpacer {
+  height: 20vh;
+}
+
 .projectItemContainer {
-    width: 50vw;
-    max-width: 75rem;
-    margin: auto auto 40vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  width: 50vw;
+  max-width: 75rem;
+  margin: auto auto 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .imageContainer {
-    flex: 0 0 55%;
-    position: relative;
+  flex: 0 0 55%;
+  position: relative;
 }
 
 .imageOverlay {
-    background-color: rgba(32, 80, 114, 0.65);
-    position: absolute;
-    width: 100%;
-    max-width: 47rem;
-    height: 99.3%;
-    left: 0;
-    transition: var(--transition);
-    cursor: pointer;
+  background-color: rgba(32, 80, 114, 0.65);
+  position: absolute;
+  width: 100%;
+  max-width: 47rem;
+  height: 99.3%;
+  left: 0;
+  transition: var(--transition);
+  cursor: pointer;
 }
 
 .imageOverlay:hover {
-    background-color: rgba(32, 80, 114, 0);
+  background-color: rgba(32, 80, 114, 0);
 }
 
 .projectImage {
-    width: 100%;
+  width: 100%;
 }
 
 .projectText {
-    width: 100%;
-    justify-content: flex-end;
-    color: var(--primary-text);
-    font-family: var(--font-family);
-    align-items: center;
-    height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  color: var(--primary-text);
+  font-family: var(--font-family);
+  align-items: center;
+  height: 100%;
 }
 
 .projectTitle {
-    position: absolute;
-    top: -3.6rem;
-    right: -1rem;
-    font-size: 2rem;
-    text-align: right;
-    width: 100%;
+  position: absolute;
+  top: -3.6rem;
+  right: -1rem;
+  font-size: 2rem;
+  text-align: right;
+  width: 100%;
 }
 
 .wrap {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 .projectDescription {
-    transform: translateY(-50%);
-    background-color: var(--primary-medium);
-    text-align: left;
-    position: absolute;
-    padding: 1rem;
-    font-size: .9rem;
-    right: 0;
-    width: 28vw;
-    max-width: 28rem;
+  transform: translateY(-50%);
+  background-color: var(--primary-medium);
+  text-align: left;
+  position: absolute;
+  padding: 1rem;
+  font-size: 0.9rem;
+  right: 0;
+  width: 28vw;
+  max-width: 28rem;
 }
 
 .techList {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    color: rgba(255, 255, 255, 0.65);
-    justify-content: space-between;
-    font-size: 0.7rem;
-    width: 22vw;
-    max-width: 22rem;
-    right: -0.9rem;
-    top: 1.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  color: rgba(255, 255, 255, 0.65);
+  justify-content: space-between;
+  font-size: 0.7rem;
+  width: 22vw;
+  max-width: 22rem;
+  right: -0.9rem;
+  top: 1.5rem;
 }
 
 @media only screen and (max-width: 1100px) {
-    .projectItemContainer {
-        width: 75vw;
-    }
+  .projectItemContainer {
+    width: 75vw;
+  }
 
-    .imageContainer {
-        flex: 0 0 60%;
-    }
+  .imageContainer {
+    flex: 0 0 60%;
+  }
 
-    .projectTitle {
-        top: -2.7rem;
-        font-size: 1.2rem;
-    }
+  .projectTitle {
+    top: -2.7rem;
+    font-size: 1.2rem;
+  }
 
-    .projectDescription {
-        font-size: 0.7rem;
-        width: 40vw;
-        max-width: 40rem;
-    }
+  .projectDescription {
+    font-size: 0.7rem;
+    width: 40vw;
+    max-width: 40rem;
+  }
 
-    .techList {
-        font-size: 0.45rem;
-        width: 29vw;
-        max-width: 29rem;
-    }
+  .techList {
+    font-size: 0.45rem;
+    width: 29vw;
+    max-width: 29rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    .projectItemContainer {
-        flex-direction: column;
-        margin: auto auto 50vh;
-    }
+  .topSpacer {
+    height: 0;
+  }
 
-    .imageContainer {
-        padding-right: 30%;
-    }
+  .projectItemContainer {
+    flex-direction: column;
+    margin: auto auto 30vh;
+  }
 
-    .imageOverlay {
-        background-color: rgba(32, 80, 114, 0.65);
-        position: absolute;
-        width: 70%;
-        max-width: 47rem;
-        height: 98.6%;
-        left: 0;
-        transition: var(--transition);
-    }
+  .imageContainer {
+    padding-right: 30%;
+  }
 
-    .imageOverlay:hover {
-        background-color: rgba(32, 80, 114, 0);
-    }
+  .imageOverlay {
+    background-color: rgba(32, 80, 114, 0.65);
+    position: absolute;
+    width: 70%;
+    max-width: 47rem;
+    height: 98.6%;
+    left: 0;
+    transition: var(--transition);
+  }
 
-    .projectText {
-        width: 100%;
-        justify-content: flex-end;
-        height: 100%;
-    }
+  .imageOverlay:hover {
+    background-color: rgba(32, 80, 114, 0);
+  }
 
-    .projectTitle {
-        top: -2rem;
-        left: 0;
-        font-size: 1.1rem;
-        width: 52vw;
-        text-align: left;
-    }
+  .projectText {
+    width: 100%;
+    justify-content: flex-end;
+    height: 100%;
+  }
 
-    .projectDescription {
-        transform: translateY(-20%);
-        padding: 3rem 1rem 1rem 1rem;
-        font-size: 0.6rem;
-        right: 0;
-        width: 60vw;
-        max-width: 60rem;
-    }
+  .projectTitle {
+    top: -2rem;
+    left: 0;
+    font-size: 1.1rem;
+    width: 52vw;
+    text-align: left;
+  }
 
-    .techList {
-        font-size: 0.4rem;
-        width: 66vw;
-        max-width: 30rem;
-        right: -0.9rem;
-        top: 1.5rem;
-    }
+  .projectDescription {
+    transform: translateY(-20%);
+    padding: 3rem 1rem 1rem 1rem;
+    font-size: 0.6rem;
+    right: 0;
+    width: 60vw;
+    max-width: 60rem;
+  }
+
+  .techList {
+    font-size: 0.4rem;
+    width: 67.5vw;
+    max-width: 30rem;
+    right: -0.9rem;
+    top: 1.5rem;
+  }
 }

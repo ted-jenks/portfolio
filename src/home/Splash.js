@@ -8,102 +8,126 @@ import {useMeasure} from "react-use";
 import {useMediaQuery} from "react-responsive";
 
 export const Splash = (props) => {
-    const [ref, {width}] = useMeasure();
-    const [show, setShow] = useState(true);
-    const isBigScreen = useMediaQuery({query: '(min-width: 1100px)'})
+  const [ref, { width }] = useMeasure();
+  const [show, setShow] = useState(true);
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1100px)" });
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 700px)" });
 
-    const linkStyle = {
-        color: "var(--contrast)",
-        cursor: "pointer",
-        textDecoration: "none",
-    }
-    const animStyleDesktop = {
-        width: "160vh",
-        height: "160vh",
-        position: "absolute",
-        right: "-30vh",
-        top: "-100%",
-        transform: "translateY(50%)",
-        animation: "fadeInAnim ease 5s",
-    }
-    const animStylePhone = {
-        width: "95vw",
-        height: "95vh",
-        position: "absolute",
-        right: "-25vw",
-        top: "5.5vh",
-        animation: "fadeInAnim ease 5s",
-    }
+  const linkStyle = {
+    color: "var(--contrast)",
+    cursor: "pointer",
+    textDecoration: "none",
+  };
+  const animStyleDesktop = {
+    width: "160vh",
+    height: "160vh",
+    position: "absolute",
+    right: "-30vh",
+    top: "-100%",
+    transform: "translateY(50%)",
+    animation: "fadeInAnim ease 5s",
+  };
+  const animStyleMed = {
+    width: "95vw",
+    height: "95vh",
+    position: "absolute",
+    right: "-25vw",
+    top: "5.5vh",
+    animation: "fadeInAnim ease 5s",
+  };
+  const animStylePhone = {
+    width: "120vw",
+    height: "120vh",
+    position: "absolute",
+    right: "-50vw",
+    top: "-5vh",
+    animation: "fadeInAnim ease 5s",
+  };
 
-    const handleScroll = () => {
-        setShow(document.body.getBoundingClientRect().top > -100)
+  const handleScroll = () => {
+    setShow(document.body.getBoundingClientRect().top > -100);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    setTimeout(() => this.setState({ show: true }), 300);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
+  });
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        setTimeout(() => this.setState({show: true}), 300);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    });
-
-    return (
-        <div style={
-            !isBigScreen ? {
-                height: "93vh",
-                position: "relative",
-                overflowX: "hidden",
-                overflowY: "hidden",
-                width: "100%"
-            } : {}}>
-            <Fade delay={300}>
-                <div className="contentContainer">
-                    <div
-                        className="mainHeading"
-                        ref={ref}
-                        style={isBigScreen ? {fontSize: width / 20} : {fontSize: 60}}
-                    >
-                        Ted Jenks
-                    </div>
-                </div>
-                <div className="contentContainer">
-                    <div
-                        className="subHeading"
-                        style={isBigScreen ? {fontSize: width / 70} : {fontSize: 16}}
-                    >
-                        Software Engineer
-                    </div>
-                </div>
-                <div className="contentContainer">
-                    <div className="intro" style={isBigScreen ? {fontSize: width / 90} : {fontSize: 10}}>
-                        Hi, I am an Imperial MSc Computer Science Graduate at{" "}
-                        <a
-                            style={linkStyle}
-                            href={"https://www.palantir.com/uk/"}
-                        >
-                            Palantir
-                        </a>
-                        .
-                        <br/>I am passionate about producing exceptional software.
-                    </div>
-                </div>
-            </Fade>
-            <Lottie
-                options={{
-                    animationData: animation,
-                    loop: true,
-                }}
-                style={isBigScreen ? animStyleDesktop : animStylePhone}
-                speed={0.15}
-                // height={isBigScreen ? 2000 : null}
-            />
-            <div className={show ? "aboutMeContainer" : "aboutMeContainer aboutMeContainerHidden"}
-                 onClick={() => props.scollToRef.current.scrollIntoView(
-                     {behavior: "smooth"})} style={isBigScreen ? {} : {fontSize: "0.9rem"}}>
-                <div style={{paddingBottom: "0.4rem"}}> About Me</div>
-                <ExpandCircleDownIcon fontSize={isBigScreen ? 'large' : 'medium'}/>
-            </div>
+  return (
+    <div
+      style={
+        !isBigScreen
+          ? {
+              height: "100vh",
+              position: "relative",
+              width: "100%",
+            }
+          : {}
+      }
+    >
+      <Fade delay={300}>
+        <div className="contentContainer">
+          <div
+            className="mainHeading"
+            ref={ref}
+            style={isBigScreen ? { fontSize: width / 20 } : { fontSize: 60 }}
+          >
+            Ted Jenks
+          </div>
         </div>
-    )
-}
+        <div className="contentContainer">
+          <div
+            className="subHeading"
+            style={isBigScreen ? { fontSize: width / 70 } : { fontSize: 16 }}
+          >
+            Software Engineer
+          </div>
+        </div>
+        <div className="contentContainer">
+          <div
+            className="intro"
+            style={isBigScreen ? { fontSize: width / 90 } : { fontSize: 10 }}
+          >
+            Hi, I am an Imperial MSc Computer Science Graduate at{" "}
+            <a style={linkStyle} href={"https://www.palantir.com/uk/"}>
+              Palantir
+            </a>
+            .
+            <br />I am passionate about producing exceptional software.
+          </div>
+        </div>
+      </Fade>
+      <Lottie
+        options={{
+          animationData: animation,
+          loop: true,
+        }}
+        style={
+          isBigScreen
+            ? animStyleDesktop
+            : isSmallScreen
+            ? animStylePhone
+            : animStyleMed
+        }
+        speed={0.15}
+        // height={isBigScreen ? 2000 : null}
+      />
+      <div
+        className={
+          show ? "aboutMeContainer" : "aboutMeContainer aboutMeContainerHidden"
+        }
+        onClick={() =>
+          props.scollToRef.current.scrollIntoView({ behavior: "smooth" })
+        }
+        style={isBigScreen ? {} : { fontSize: "0.9rem" }}
+      >
+        <div style={{ paddingBottom: "0.4rem" }}> Projects</div>
+        <ExpandCircleDownIcon fontSize={isBigScreen ? "large" : "medium"} />
+      </div>
+    </div>
+  );
+};
