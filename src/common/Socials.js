@@ -7,7 +7,7 @@ import {useMediaQuery} from "react-responsive";
 
 export const Socials = () => {
     const isTooSmall = useMediaQuery({query: '(min-height: 600px)'});
-    const isTooNarrow = useMediaQuery({query: '(min-width: 1100px)'});
+    const isTooNarrow = useMediaQuery({query: '(min-width: 700px)'});
     const [loadTime, setLoadTime] = useState(false);
 
     setTimeout(() => setLoadTime(true), 900)

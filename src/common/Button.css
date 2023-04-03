@@ -1,6 +1,7 @@
 @import url("../Base.css");
 
 .buttonContainer {
+    background-color: rgba(32, 80, 114, 0.89);
     align-itmes: center;
     justify-content: center;
     border: 0.05rem solid var(--contrast);
