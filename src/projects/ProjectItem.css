@@ -28,6 +28,7 @@
   left: 0;
   transition: var(--transition);
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .imageOverlay:hover {
@@ -36,6 +37,7 @@
 
 .projectImage {
   width: 100%;
+  border-radius: 20px;
 }
 
 .projectText {
@@ -50,7 +52,7 @@
 .projectTitle {
   position: absolute;
   top: -3.6rem;
-  right: -1rem;
+  right: 0rem;
   font-size: 2rem;
   text-align: right;
   width: 100%;
@@ -71,6 +73,7 @@
   right: 0;
   width: 28vw;
   max-width: 28rem;
+  border-radius: 20px;
 }
 
 .techList {
@@ -82,7 +85,7 @@
   font-size: 0.7rem;
   width: 22vw;
   max-width: 22rem;
-  right: -0.9rem;
+  right: 0rem;
   top: 1.5rem;
 }
 
@@ -108,7 +111,7 @@
 
   .techList {
     font-size: 0.45rem;
-    width: 29vw;
+    width: 27vw;
     max-width: 29rem;
   }
 }
@@ -166,9 +169,9 @@
 
   .techList {
     font-size: 0.4rem;
-    width: 67.5vw;
+    width: 59vw;
     max-width: 30rem;
-    right: -0.9rem;
+    right: 0rem;
     top: 1.5rem;
   }
 }

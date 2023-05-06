@@ -20,7 +20,7 @@ export const Home = () => {
 
       <Fade delay={100}>
         <Projects />
-        <div style={{ height: "15vh" }} />
+        <div style={{ height: "3vh" }} />
       </Fade>
 
       <Ender />

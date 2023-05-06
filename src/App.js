@@ -14,7 +14,7 @@ class App extends Component {
     }
 
     handleResumeClick = () => {
-        window.location.href = cv
+        window.open(cv, "_blank")
     }
 
     render() {

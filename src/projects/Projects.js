@@ -4,6 +4,8 @@ import Fade from "react-reveal/Fade";
 import ProjectItem from "./ProjectItem";
 import MotshiImg from "../assets/motshi.png";
 import VisualisingImg from "../assets/visualisingTheNews.png";
+import sparkImg from "../assets/spark.png";
+import stockImg from "../assets/stockbot.png";
 
 class Projects extends Component {
   componentDidMount() {
@@ -15,6 +17,44 @@ class Projects extends Component {
       <>
         <Fade delay={50}>
           <div className="topSpacer" />
+          <ProjectItem
+            text={"right"}
+            img={stockImg}
+            title="StockBot"
+            route="https://stockbot.site/"
+            tech={[
+              "OpenAI",
+              "Typescript",
+              "Prompt Engineering",
+              "MUI",
+              "React",
+            ]}
+          >
+            StockBot takes natural language queries on the World markets and
+            produces dashboards with up-to-date news and prices. GPT 3.5 is used
+            write API queries and define the layout of the dashboard. Users can
+            modify dashboards with simple text instructions, and save those they
+            like for later.
+          </ProjectItem>
+          <ProjectItem
+            text={"left"}
+            img={sparkImg}
+            title="Spark"
+            route="https://github.com/apache/spark"
+            tech={[
+              "Scala",
+              "Java",
+              "Python",
+              "Distributed Computing",
+              "Open-source",
+            ]}
+          >
+            Spark is a unified analytics engine for large-scale data processing.
+            As a member of the Spark team at Palantir, I maintain our own fork
+            of the Spark code-base and connect it to our software solutions. We
+            also make upstream contributions to drive the open-source project
+            forward.
+          </ProjectItem>
           <ProjectItem
             text={"right"}
             img={MotshiImg}

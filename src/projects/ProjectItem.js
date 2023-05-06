@@ -9,7 +9,7 @@ class ProjectItem extends Component {
             <div className={"projectItemContainer"}>
                 <div className="imageContainer">
                     <div className="imageOverlay" onClick={() => {
-                        window.location.href = this.props.route;
+                        window.open(this.props.route, "_blank");
                     }}/>
                     <img className={"projectImage"} src={this.props.img} alt={"image of project"}/>
                 </div>
@@ -48,13 +48,13 @@ class ProjectItem extends Component {
                     <div className={"wrap"}>
                         <div className={"projectDescription"} style={{left: 0, zIndex: 10}}>
                             <div className={"wrap"}>
-                                <div className={"projectTitle"} style={{textAlign: "left", left: "-1rem"}}>
+                                <div className={"projectTitle"} style={{textAlign: "left", left: "0rem"}}>
                                     {this.props.title}
                                 </div>
                             </div>
                             {this.props.children}
                             <div className={"wrap"}>
-                                <div className="techList" style={{left: "-0.9rem"}}>
+                                <div className="techList" style={{left: "0rem"}}>
                                     {this.props.tech.map((t, i) => {
                                         return (
                                             <div key={i}>
@@ -68,7 +68,7 @@ class ProjectItem extends Component {
                 </div>
                 <div className="imageContainer">
                     <div className="imageOverlay" onClick={() => {
-                        window.location.href = this.props.route;
+                        window.open(this.props.route, "_blank");
                     }}/>
                     <img className={"projectImage"} src={this.props.img} alt={"image of project"}/>
                 </div>
@@ -80,7 +80,7 @@ class ProjectItem extends Component {
             <div className={"projectItemContainer"}>
                 <div className="imageContainer" style={{paddingLeft: "30%", paddingRight: "0"}}>
                     <div className="imageOverlay" style={{left: "30%", right: 0, width: "70.1%"}} onClick={() => {
-                        window.location.href = this.props.route;
+                        window.open(this.props.route, "_blank");
                     }}/>
                     <img className={"projectImage"} src={this.props.img} alt={"image of project"}/>
                 </div>
@@ -94,7 +94,7 @@ class ProjectItem extends Component {
                             </div>
                             {this.props.children}
                             <div className={"wrap"}>
-                                <div className="techList" style={{left: "-0.9rem"}}>
+                                <div className="techList" style={{left: "0rem"}}>
                                     {this.props.tech.map((t, i) => {
                                         return (
                                             <div key={i}>
