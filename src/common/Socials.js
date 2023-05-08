@@ -16,17 +16,17 @@ export const Socials = () => {
             className={(isTooSmall && loadTime && isTooNarrow) ? "socialsContainer activeSoc" : "socialsContainer hiddenSoc"}>
             <div className="socialsItem" onClick="location.href='https://www.linkedin.com/in/ted-jenks-ab631a1a3/';">
                 <a className="socialsItem" href="https://www.linkedin.com/in/ted-jenks-ab631a1a3/">
-                    <LinkedIn fontSize='medium'/>
+                    <LinkedIn fontSize='inherit'/>
                 </a>
             </div>
             <div className="socialsItem">
                 <a className="socialsItem" href="https://github.com/ted-jenks">
-                    <GitHub fontSize='medium'/>
+                    <GitHub fontSize='inherit'/>
                 </a>
             </div>
             <div className="socialsItem">
                 <a className="socialsItem" href="mailto: ted.c.jenks@gmail.com">
-                    <Email fontSize='medium'/>
+                    <Email fontSize='inherit'/>
                 </a>
             </div>
             <div className="line"/>
