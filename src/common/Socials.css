@@ -1,32 +1,38 @@
 @import url("../Base.css");
 
 .socialsContainer {
-    width: calc(5rem + 1vw);
-    position: fixed;
-    bottom: 0;
-    transition: linear .7s;
+  width: 5vw;
+  position: fixed;
+  bottom: 0;
+  transition: linear 0.7s;
+}
+
+@media only screen and (max-width: 1100px) {
+  .socialsContainer {
+    width: 9vw;
+  }
 }
 
 .socialsItem {
-    justify-content: center;
-    margin-bottom: 1.3rem;
-    color: var(--contrast);
-    cursor: pointer;
+  justify-content: center;
+  margin-bottom: 1.6vh;
+  color: var(--contrast);
+  cursor: pointer;
 }
 
-.line {;
-    margin-left: auto;
-    margin-right: auto;
-    width: 0.1rem;
-    height: 8vh;
-    background-color: var(--contrast);
+.line {
+  margin-left: auto;
+  margin-right: auto;
+  width: 0.05vw;
+  height: 8vh;
+  background-color: var(--contrast);
 }
 
 .hiddenSoc {
-    transition: linear .2s;
-    transform: translateY(20rem);
+  transition: linear 0.2s;
+  transform: translateY(60vh);
 }
 
 .activeSoc {
-    transform: translateY(0rem);
+  transform: translateY(0rem);
 }

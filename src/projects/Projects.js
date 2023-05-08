@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Projects.css";
 import Fade from "react-reveal/Fade";
 import ProjectItem from "./ProjectItem";
-import MotshiImg from "../assets/motshi.png";
+import MotshiImg from "../assets/motshi.jpg";
 import VisualisingImg from "../assets/visualisingTheNews.png";
 import sparkImg from "../assets/spark.png";
 import stockImg from "../assets/stockbot.png";
@@ -15,8 +15,7 @@ class Projects extends Component {
   render() {
     return (
       <>
-        <Fade delay={50}>
-          <div className="topSpacer" />
+        <Fade delay={1000}>
           <ProjectItem
             text={"right"}
             img={stockImg}
@@ -35,7 +34,26 @@ class Projects extends Component {
             write API queries and define the layout of the dashboard. Users can
             modify dashboards with simple text instructions, and save those they
             like for later.
+            <br />
+            <br />
+            Many users of ChatGPT have been impressed by the LLM's ability to
+            answer challenging questions about the world. However, its frozen
+            state (trained with data available up to 2021) means it struggles
+            with questions related to current affairs. By using GPT's
+            comprehension and tuning the foundational model to complete a
+            single, structured task, we are able to build an app that can
+            feedback real-time, objectively factual data to the user.
+            <br />
+            <br />
+            Moreover, by using an LLM to process the user's query into a
+            predefined, structured state, we put the model on rails. Given the
+            issues faced with 'hallucinations' in which the model returns
+            nonsensical answers, this is valuable for real-world scenarios in
+            which the output of the AI actually needs to be used for high-stakes
+            decision making, such as trading in the World markets.
           </ProjectItem>
+        </Fade>
+        <Fade delay={50}>
           <ProjectItem
             text={"left"}
             img={sparkImg}
@@ -54,6 +72,10 @@ class Projects extends Component {
             of the Spark code-base and connect it to our software solutions. We
             also make upstream contributions to drive the open-source project
             forward.
+            <br />
+            <br />
+            As the core of the compute backend, we collaborate with many teams
+            across the company to produce our software offerings.
           </ProjectItem>
           <ProjectItem
             text={"right"}
@@ -75,6 +97,15 @@ class Projects extends Component {
             network, leaving users in complete control of their data.
             <br />
             <br />
+            Motshi represents an alternative look into the world of
+            cryptocurrency and blockchain. One focused on practical solutions to
+            existing problems that the exciting technology can actually help
+            solve. With the age of digital identity just around the corner,
+            decentralisation of information and control could genuinely curb
+            many of the concerns that have prevented it becoming a reality until
+            now.
+            <br />
+            <br />
             Users have long awaited a digital identity application to render
             their physical wallets useless. For the first time, Motshi makes
             this possible.
@@ -93,7 +124,8 @@ class Projects extends Component {
             to each node. Articles are analysed with NLP and the areas they
             effect can be identified in real time. Multiple sources are scraped
             for articles, keeping the visualisation up to date and unbiased. See
-            the demo presented by my team mate Jonas.
+            the demo presented by my team mate Jonas in the video that comes up
+            on click.
             {/*<br/><br/>*/}
             {/*NOTE: Big Tech Visualisation had the machine running article scraping shut down. Therefore, it*/}
             {/*is in a frozen state. Articles can still be seen by setting the date filter to a high value.*/}

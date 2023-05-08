@@ -1,177 +1,113 @@
 @import url("../Base.css");
 
-
 .topSpacer {
   height: 20vh;
 }
 
 .projectItemContainer {
-  width: 50vw;
-  max-width: 75rem;
-  margin: auto auto 20vh;
+  width: 75vw;
+  margin: auto auto 25vh;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
+  border-radius: 2vw;
+  -moz-box-shadow: 0 0 100px rgba(34, 36, 51, 0.82);
+  -webkit-box-shadow: 0 0 100px rgba(34, 36, 51, 0.82);
+  box-shadow: 0 0 100px rgba(34, 36, 51, 0.82);
+  cursor: pointer;
 }
 
 .imageContainer {
-  flex: 0 0 55%;
+  flex: 0 0 45%;
   position: relative;
-}
-
-.imageOverlay {
-  background-color: rgba(32, 80, 114, 0.65);
-  position: absolute;
-  width: 100%;
-  max-width: 47rem;
-  height: 99.3%;
-  left: 0;
-  transition: var(--transition);
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.imageOverlay:hover {
-  background-color: rgba(32, 80, 114, 0);
 }
 
 .projectImage {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 2vw 0px 0px 2vw;
+  display: block;
 }
 
 .projectText {
-  width: 100%;
-  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: var(--primary-text);
   font-family: var(--font-family);
   align-items: center;
-  height: 100%;
+  background-color: rgba(11, 53, 70, 0.97);
+  border-radius: 0px 2vw 2vw 0px;
+  padding: 5vh 3vw 3.5vh 3vw;
 }
 
 .projectTitle {
-  position: absolute;
-  top: -3.6rem;
-  right: 0rem;
   font-size: 2rem;
-  text-align: right;
+  font-size: 2vw;
+  text-align: left;
   width: 100%;
 }
 
-.wrap {
-  position: relative;
-  height: 100%;
-}
-
 .projectDescription {
-  transform: translateY(-50%);
-  background-color: var(--primary-medium);
   text-align: left;
-  position: absolute;
-  padding: 1rem;
   font-size: 0.9rem;
-  right: 0;
-  width: 28vw;
-  max-width: 28rem;
-  border-radius: 20px;
+  font-size: 0.8vw;
 }
 
 .techList {
-  position: absolute;
+  width: 100%;
   display: flex;
   flex-direction: row;
   color: rgba(255, 255, 255, 0.65);
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 0.7rem;
-  width: 22vw;
-  max-width: 22rem;
-  right: 0rem;
-  top: 1.5rem;
+  font-size: 0.6vw;
+  padding-top: 15px;
 }
 
 @media only screen and (max-width: 1100px) {
   .projectItemContainer {
-    width: 75vw;
+    flex-direction: column;
   }
 
-  .imageContainer {
-    flex: 0 0 60%;
+  .projectImage {
+    border-radius: 2vw 2vw 0 0;
+  }
+
+  .projectText {
+    border-radius: 0 0 2vw 2vw;
   }
 
   .projectTitle {
-    top: -2.7rem;
-    font-size: 1.2rem;
+    font-size: 3vw;
+    padding-bottom: 2vh;
   }
 
   .projectDescription {
-    font-size: 0.7rem;
-    width: 40vw;
-    max-width: 40rem;
+    font-size: 1.5vw;
+    padding-bottom: 2vh;
   }
 
   .techList {
-    font-size: 0.45rem;
-    width: 27vw;
-    max-width: 29rem;
+    font-size: 1.2vw;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .topSpacer {
-    height: 0;
-  }
-
   .projectItemContainer {
-    flex-direction: column;
-    margin: auto auto 30vh;
-  }
-
-  .imageContainer {
-    padding-right: 30%;
-  }
-
-  .imageOverlay {
-    background-color: rgba(32, 80, 114, 0.65);
-    position: absolute;
-    width: 70%;
-    max-width: 47rem;
-    height: 98.6%;
-    left: 0;
-    transition: var(--transition);
-  }
-
-  .imageOverlay:hover {
-    background-color: rgba(32, 80, 114, 0);
-  }
-
-  .projectText {
-    width: 100%;
-    justify-content: flex-end;
-    height: 100%;
+    margin: auto auto 10vh;
   }
 
   .projectTitle {
-    top: -2rem;
-    left: 0;
-    font-size: 1.1rem;
-    width: 52vw;
-    text-align: left;
+    font-size: 5vw;
+    padding-bottom: 2vh;
   }
 
   .projectDescription {
-    transform: translateY(-20%);
-    padding: 3rem 1rem 1rem 1rem;
-    font-size: 0.6rem;
-    right: 0;
-    width: 60vw;
-    max-width: 60rem;
+    font-size: 2.4vw;
+    padding-bottom: 2vh;
   }
 
   .techList {
-    font-size: 0.4rem;
-    width: 59vw;
-    max-width: 30rem;
-    right: 0rem;
-    top: 1.5rem;
+    font-size: 2vw;
   }
 }
