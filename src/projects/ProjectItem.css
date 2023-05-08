@@ -93,6 +93,16 @@
 }
 
 @media only screen and (max-width: 700px) {
+
+  .projectImage {
+    border-radius: 5vw 5vw 0 0;
+  }
+
+  .projectText {
+    padding: 3vh 7vw 3vh 7vw;
+    border-radius: 0 0 5vw 5vw;
+  }
+
   .projectItemContainer {
     margin: auto auto 10vh;
   }
