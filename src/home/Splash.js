@@ -1,17 +1,33 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./Splash.css";
 import Fade from "react-reveal/Fade";
 import Lottie from "lottie-react-web";
 import animation from "../assets/homeAnimation.json";
-import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
-import {useMeasure} from "react-use";
-import {useMediaQuery} from "react-responsive";
+import { useMediaQuery } from "react-responsive";
+import Button from "../common/Button";
+import cv from "../assets/CV.pdf";
+import { Parallax } from "react-scroll-parallax";
 
 export const Splash = (props) => {
-  const [ref, { width }] = useMeasure();
-  const [show, setShow] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const isBigScreen = useMediaQuery({ query: "(min-width: 1100px)" });
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 700px)" });
+
+  const handleResumeClick = () => {
+    window.open(cv, "_blank");
+  };
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const linkStyle = {
     color: "var(--contrast)",
@@ -19,85 +35,43 @@ export const Splash = (props) => {
     textDecoration: "none",
   };
   const animStyleDesktop = {
-    width: "160vh",
-    height: "160vh",
-    position: "absolute",
-    right: "-30vh",
+    width: "140vh",
+    height: "140vh",
+    position: "fixed",
+    right: "-10%",
     top: "-100%",
     transform: "translateY(50%)",
-    animation: "fadeInAnim ease 5s",
-  };
-  const animStyleMed = {
-    width: "95vw",
-    height: "95vh",
-    position: "absolute",
-    right: "-25vw",
-    top: "5.5vh",
     animation: "fadeInAnim ease 5s",
   };
   const animStylePhone = {
     width: "120vw",
     height: "120vh",
-    position: "absolute",
+    position: "fixed",
     right: "-50vw",
     top: "-5vh",
     animation: "fadeInAnim ease 5s",
   };
 
-  const handleScroll = () => {
-    setShow(document.body.getBoundingClientRect().top > -100);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    setTimeout(() => this.setState({ show: true }), 300);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
-
   return (
-    <div
-      style={
-        !isBigScreen
-          ? {
-              height: "100vh",
-              position: "relative",
-              width: "100%",
-            }
-          : {}
-      }
-    >
+    <div>
       <Fade delay={300}>
         <div className="contentContainer">
-          <div
-            className="mainHeading"
-            ref={ref}
-            style={isBigScreen ? { fontSize: width / 20 } : { fontSize: 60 }}
-          >
-            Ted Jenks
-          </div>
+          <div className="mainHeading">Ted Jenks</div>
         </div>
         <div className="contentContainer">
-          <div
-            className="subHeading"
-            style={isBigScreen ? { fontSize: width / 70 } : { fontSize: 16 }}
-          >
-            Software Engineer
-          </div>
+          <div className="subHeading">Software Engineer</div>
         </div>
         <div className="contentContainer">
-          <div
-            className="intro"
-            style={isBigScreen ? { fontSize: width / 90 } : { fontSize: 10 }}
-          >
+          <div className="intro">
             Hi, I am an Imperial MSc Computer Science Graduate at{" "}
             <a style={linkStyle} href={"https://www.palantir.com/uk/"}>
               Palantir
             </a>
             .
             <br />I am passionate about producing exceptional software.
+          </div>
+          <div className="resumeContainer">
+            <Button text={"Resume"} onClick={handleResumeClick} />
           </div>
         </div>
       </Fade>
@@ -108,26 +82,11 @@ export const Splash = (props) => {
         }}
         style={
           isBigScreen
-            ? animStyleDesktop
-            : isSmallScreen
-            ? animStylePhone
-            : animStyleMed
+            ? { ...animStyleDesktop, top: -100 - scrollPosition / 70 + "%" }
+            : { ...animStylePhone, top: -5 - scrollPosition / 30 + "vh" }
         }
-        speed={0.15}
-        // height={isBigScreen ? 2000 : null}
+        speed={0.05}
       />
-      <div
-        className={
-          show ? "aboutMeContainer" : "aboutMeContainer aboutMeContainerHidden"
-        }
-        onClick={() =>
-          props.scollToRef.current.scrollIntoView({ behavior: "smooth" })
-        }
-        style={isBigScreen ? {} : { fontSize: "0.9rem" }}
-      >
-        <div style={{ paddingBottom: "0.4rem" }}> Projects</div>
-        <ExpandCircleDownIcon fontSize={isBigScreen ? "large" : "medium"} />
-      </div>
     </div>
   );
 };

@@ -1,74 +1,83 @@
 @import url("../Base.css");
 
 .mainHeading {
-    text-align: left;
-    width: 100vw;
-    padding: 0 0 0 2.2rem;
-    line-height: 0.6;
+  text-align: left;
+  width: 100vw;
+  padding: 0 0 0 1.4vw;
+  line-height: 7vh;
+  font-size: 5vw;
 }
 
 .subHeading {
-    text-align: left;
-    width: 100vw;
-    color: var(--contrast);
-    padding: 0 0 0 calc(2.2rem + .6em);
-    line-height: 0.1em;
+  text-align: left;
+  width: 100vw;
+  color: var(--contrast);
+  padding: 0 0 0 2.4vw;
+  line-height: 3vh;
+  font-size: 1vw;
 }
 
 .intro {
-    margin-top: -1.5vh;
-    text-align: left;
-    width: 100vw;
-    color: var(--primary-text);
-    padding: 0 0 100vh calc(2.2rem + .89%);
-    line-height: 1;
+  margin-top: -1.5vh;
+  text-align: left;
+  width: 100vw;
+  color: var(--primary-text);
+  padding: 0 0 0 2.4vw;
+  font-size: 0.9vw;
 }
 
-.aboutMeContainer {
-    visibility: visible;
-    position: fixed;
-    font-family: var(--nav-font-family);
-    font-size: var(--nav-font-size);
-    color: var(--primary-text);
-    bottom: .5rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: max-content;
-    cursor: pointer;
-    animation: fadeInAnim ease 2s;
-    transition: var(--transition);
+.resumeContainer {
+  width: 7vw;
+  padding: 3vh 0 18vh 2.4vw;
+  animation: slideInRightAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-
-.aboutMeContainerHidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(3rem);
-}
-
-.aboutMeContainer:hover {
-    color: var(--contrast);
-}
-
 
 @media only screen and (max-width: 1100px) {
-    .mainHeading {
-        padding-left: 1rem;
-    }
+  .mainHeading {
+    font-size: 10vw;
+    padding-left: 3vw;
+  }
 
-    .subHeading {
-        text-align: left;
-        width: 100vw;
-        color: var(--contrast);
-        padding: 0 0 0 1.5rem;
-        line-height: 0.1em;
-    }
+  .subHeading {
+    font-size: 3vw;
+    padding-left: 5vw;
+  }
 
-    .intro {
-        text-align: left;
-        width: 90vw;
-        color: var(--primary-text);
-        padding: 0 1rem 0 1.5rem;
-        line-height: 1;
-    }
+  .intro {
+    font-size: 2vw;
+    padding-left: 5vw;
+  }
+
+  .resumeContainer {
+    width: 10vw;
+    padding-top: 1vh;
+    padding-bottom: 12vh;
+    padding-left: 5vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .mainHeading {
+    font-size: 12vw;
+    padding-left: 10vw;
+  }
+
+  .subHeading {
+    font-size: 4vw;
+    padding-left: 12vw;
+  }
+
+  .intro {
+    font-size: 2.4vw;
+    padding-left: 12vw;
+  }
+
+  .resumeContainer {
+    width: 20vw;
+    padding-left: 6vw;
+    padding-top: 0;
+    padding-bottom: 6vh;
+  }
 }
