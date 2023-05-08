@@ -4,7 +4,6 @@ import Socials from "./common/Socials";
 import { Home } from "./home/Home";
 import { Route, Routes } from "react-router-dom";
 import NoRoute from "./noRoute/NoRoute";
-import cv from "./assets/CV.pdf";
 
 class App extends Component {
   componentDidMount() {
