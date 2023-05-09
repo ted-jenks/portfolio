@@ -22,7 +22,7 @@ export const Splash = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true  });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -40,8 +40,8 @@ export const Splash = (props) => {
     position: "fixed",
     right: "-10%",
     top: "-100%",
-    transform: "translateY(50%)",
     animation: "fadeInAnim ease 5s",
+    transition: "transform 300ms ease-out",
   };
   const animStylePhone = {
     width: "120vw",
@@ -50,6 +50,7 @@ export const Splash = (props) => {
     right: "-50vw",
     top: "-5vh",
     animation: "fadeInAnim ease 5s",
+    transition: "transform 300ms ease-out",
   };
 
   return (
@@ -82,8 +83,8 @@ export const Splash = (props) => {
         }}
         style={
           isBigScreen
-            ? { ...animStyleDesktop, top: -100 - scrollPosition / 70 + "%" }
-            : { ...animStylePhone, top: -5 - scrollPosition / 30 + "vh" }
+            ? { ...animStyleDesktop, transform: "translateY(" + (50 - scrollPosition/70) + "%)" }
+            : { ...animStylePhone, transform: "translateY(" + ( - scrollPosition / 30) + "vh" }
         }
         speed={0.05}
       />

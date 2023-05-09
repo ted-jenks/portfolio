@@ -71,7 +71,8 @@
 
   .intro {
     font-size: 2.4vw;
-    padding-left: 12vw;
+    width: 76vw;
+    padding: 0 12vw 0 12vw
   }
 
   .resumeContainer {
