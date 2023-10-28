@@ -6,6 +6,7 @@ import MotshiImg from "../assets/motshi.jpg";
 import VisualisingImg from "../assets/visualisingTheNews.png";
 import sparkImg from "../assets/spark.png";
 import stockImg from "../assets/stockbot.png";
+import eveImg from "../assets/eve-image.png";
 
 class Projects extends Component {
   componentDidMount() {
@@ -56,6 +57,20 @@ class Projects extends Component {
         <Fade delay={50}>
           <ProjectItem
             text={"left"}
+            img={eveImg}
+            title="eve-cli"
+            route="https://github.com/ted-jenks/eve-cli"
+            tech={["Rust", "OpenAI", "Prompt Engineering", "Clap", "Cargo"]}
+          >
+            Meet eve, your personal AI development assistant. She is an
+            OpenAI-backed command line interface implemented in Rust.
+            <br />
+            <br />
+            She is designed to be resilient to improper input with careful code
+            design and strong error management. See the github repo for the demo.
+          </ProjectItem>
+          <ProjectItem
+            text={"right"}
             img={sparkImg}
             title="Spark"
             route="https://github.com/apache/spark"
@@ -78,7 +93,7 @@ class Projects extends Component {
             across the company to produce our software offerings.
           </ProjectItem>
           <ProjectItem
-            text={"right"}
+            text={"left"}
             img={MotshiImg}
             title="Motshi"
             route="https://motshi.com/"
@@ -111,7 +126,7 @@ class Projects extends Component {
             this possible.
           </ProjectItem>
           <ProjectItem
-            text={"left"}
+            text={"right"}
             img={VisualisingImg}
             title="Visualising the News"
             route="https://www.youtube.com/watch?v=hM1BTkoR0aI"

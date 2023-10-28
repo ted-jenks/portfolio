@@ -72,7 +72,7 @@ export const Splash = (props) => {
             <br />I am passionate about producing exceptional software.
           </div>
           <div className="resumeContainer">
-            <Button text={"Resume"} onClick={handleResumeClick} />
+            <Button text={"Résumé"} onClick={handleResumeClick} />
           </div>
         </div>
       </Fade>
