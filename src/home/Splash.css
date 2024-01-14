@@ -1,34 +1,31 @@
 @import url("../Base.css");
 
 .mainHeading {
-  text-align: left;
+  text-align: center;
   width: 100vw;
-  padding: 0 0 0 1.4vw;
   line-height: 7vh;
   font-size: 5vw;
 }
 
 .subHeading {
-  text-align: left;
+  text-align: center;
   width: 100vw;
   color: var(--contrast);
-  padding: 0 0 0 2.4vw;
   line-height: 3vh;
   font-size: 1vw;
 }
 
 .intro {
   margin-top: -1.5vh;
-  text-align: left;
+  text-align: center;
   width: 100vw;
   color: var(--primary-text);
-  padding: 0 0 0 2.4vw;
   font-size: 0.80vw;
 }
 
 .resumeContainer {
   width: 7vw;
-  padding: 3vh 0 18vh 2.4vw;
+  padding: 3vh 0 8vh 46.5VW;
   animation: slideInRightAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -37,47 +34,41 @@
 @media only screen and (max-width: 1100px) {
   .mainHeading {
     font-size: 10vw;
-    padding-left: 3vw;
   }
 
   .subHeading {
     font-size: 3vw;
-    padding-left: 5vw;
   }
 
   .intro {
     font-size: 2vw;
-    padding-left: 5vw;
   }
 
   .resumeContainer {
     width: 10vw;
+    padding-left: 45vw;
     padding-top: 1vh;
-    padding-bottom: 12vh;
-    padding-left: 5vw;
+    padding-bottom: 8vh;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .mainHeading {
     font-size: 12vw;
-    padding-left: 10vw;
   }
 
   .subHeading {
     font-size: 4vw;
-    padding-left: 12vw;
   }
 
   .intro {
+    padding-top: 1vh;
     font-size: 2.4vw;
-    width: 76vw;
-    padding: 0 12vw 0 12vw
   }
 
   .resumeContainer {
     width: 20vw;
-    padding-left: 6vw;
+    padding-left: 36vw;
     padding-top: 0;
     padding-bottom: 6vh;
   }

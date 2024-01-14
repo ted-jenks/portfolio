@@ -7,6 +7,7 @@ import VisualisingImg from "../assets/visualisingTheNews.png";
 import sparkImg from "../assets/spark.png";
 import stockImg from "../assets/stockbot.png";
 import eveImg from "../assets/eve-image.png";
+import whirlImg from "../assets/whirl.png";
 
 class Projects extends Component {
   componentDidMount() {
@@ -56,11 +57,11 @@ class Projects extends Component {
         </Fade>
         <Fade delay={50}>
           <ProjectItem
-            text={"left"}
-            img={eveImg}
-            title="eve-cli"
-            route="https://github.com/ted-jenks/eve-cli"
-            tech={["Rust", "OpenAI", "Prompt Engineering", "Clap", "Cargo"]}
+              text={"left"}
+              img={eveImg}
+              title="eve-cli"
+              route="https://github.com/ted-jenks/eve-cli"
+              tech={["Rust", "OpenAI", "Prompt Engineering", "Clap", "Cargo"]}
           >
             Meet eve, your personal AI development assistant. She is an
             OpenAI-backed command line interface implemented in Rust.
@@ -70,7 +71,20 @@ class Projects extends Component {
             design and strong error management. See the github repo for the demo.
           </ProjectItem>
           <ProjectItem
-            text={"right"}
+              text={"right"}
+              img={whirlImg}
+              title="whirl"
+              route="https://github.com/ted-jenks/whirl"
+              tech={["Haskell", "Functional", "Library", "Stack", "Cabal"]}
+          >
+            Whirl is a basic logging library for Haskell. I took on this project to teach myself the basics of Haskell
+            and experience setting up a full library in the language.
+            <br />
+            <br />
+            It supports asynchronous logging functionality at different levels.
+          </ProjectItem>
+          <ProjectItem
+            text={"left"}
             img={sparkImg}
             title="Spark"
             route="https://github.com/apache/spark"
@@ -93,7 +107,7 @@ class Projects extends Component {
             across the company to produce our software offerings.
           </ProjectItem>
           <ProjectItem
-            text={"left"}
+            text={"right"}
             img={MotshiImg}
             title="Motshi"
             route="https://motshi.com/"
@@ -126,7 +140,7 @@ class Projects extends Component {
             this possible.
           </ProjectItem>
           <ProjectItem
-            text={"right"}
+            text={"left"}
             img={VisualisingImg}
             title="Visualising the News"
             route="https://www.youtube.com/watch?v=hM1BTkoR0aI"

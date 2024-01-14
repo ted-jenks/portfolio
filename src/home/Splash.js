@@ -76,18 +76,18 @@ export const Splash = (props) => {
           </div>
         </div>
       </Fade>
-      <Lottie
-        options={{
-          animationData: animation,
-          loop: true,
-        }}
-        style={
-          isBigScreen
-            ? { ...animStyleDesktop, transform: "translateY(" + (50 - scrollPosition/70) + "%)" }
-            : { ...animStylePhone, transform: "translateY(" + ( - scrollPosition / 30) + "vh" }
-        }
-        speed={0.05}
-      />
+      {/*<Lottie*/}
+      {/*  options={{*/}
+      {/*    animationData: animation,*/}
+      {/*    loop: true,*/}
+      {/*  }}*/}
+      {/*  style={*/}
+      {/*    isBigScreen*/}
+      {/*      ? { ...animStyleDesktop, transform: "translateY(" + (50 - scrollPosition/70) + "%)" }*/}
+      {/*      : { ...animStylePhone, transform: "translateY(" + ( - scrollPosition / 30) + "vh" }*/}
+      {/*  }*/}
+      {/*  speed={0.05}*/}
+      {/*/>*/}
     </div>
   );
 };
